@@ -20,12 +20,16 @@ function NavItems({ menu }) {
             key={item.title}
             to={item.link}
             className={({ isActive }) => isActive ? "text-[#19918F] font-bold" : "text-black"}
-          >
+            onClick={() => {
+              if (item.title === "Sign Out") {
+                localStorage.removeItem("loginData");
+              }
+            }}          >
             {item.title}
           </NavLink>
         );
       })}
-    </ul>
+    </ul >
   );
 }
 

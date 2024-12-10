@@ -1,0 +1,73 @@
+  {
+      "posts": [
+        { "id": "1", "title": "a title", "views": 100 },
+        { "id": "2", "title": "another title", "views": 200 }
+      ],
+      "comments": [
+        { "id": "1", "text": "a comment about post 1", "postId": "1" },
+        { "id": "2", "text": "another comment about post 1", "postId": "1" }
+      ],
+      "profile": {
+        "name": "typicode"
+      },
+      "users": [
+        { "name": "Chelsea",
+          "password" : "12345",
+          "email": "chelsea@gmail.com",
+          "imgUrl" : "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTYG_4gi-VkiyjvcRYD2jpQ3rT3hYncr2a5dz2ImZncYP-ZkvK-sxiyC0FyTOZtURudSfRmYXa1PecLPR4sS9t22Q",
+          "saldo" : "10.000" ,
+          "noAccount" : "1001010"
+        },
+        { "name": "Vito",
+          "password" : "12345",
+          "email": "vito@gmail.com",
+          "imgUrl" :"https://media.licdn.com/dms/image/v2/D5603AQGLWZpk4-9haw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714210941650?e=1739404800&v=beta&t=1u5GD-KfuQwZcEMSj210F9xYDzDVLy5Srs5b_OAKGUs",
+          "saldo" : "1",
+          "noAccount" : "2020202"
+      }
+      ],
+      "table": [
+        { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "DEBIT",
+      "noAccount" : "1001010",
+    "description" : "Transfer to Vito",
+    "amount" : "+ 75.000.000"
+      }, 
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "CREDIT",
+      "noAccount" : "1001010",
+    "description" : "Transfer from Chelsea",
+    "amount" : "- 75.000.000"
+      },
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "DEBIT",
+      "noAccount" : "2020202",
+    "description" : "Transfer to Chelsea",
+    "amount" : "+ 75.000.000"
+      },
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "CREDIT",
+      "noAccount" : "2020202",
+    "description" : "Transfer from Vito",
+    "amount" : "- 75.000.000"
+      },
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "DEBIT",
+      "noAccount" : "1001010",
+    "description" : "Transfer to Vito",
+    "amount" : "+ 75.000.000"
+      }, 
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "CREDIT",
+      "noAccount" : "1001010",
+    "description" : "Transfer from Chelsea",
+    "amount" : "- 75.000.000"
+      },
+      { "dateTime" : "20:10 - 30 June 2022",
+      "type" : "DEBIT",
+      "noAccount" : "2020202",
+    "description" : "Transfer to Chelsea",
+    "amount" : "+ 75.000.000"
+    }   
+      ]
+    }
