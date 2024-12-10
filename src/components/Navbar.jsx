@@ -4,19 +4,19 @@ import logo from "../assets/logo.png";
 const MENU = [
   {
     title: "Dashboard",
-    link: "#",
+    link: "/dashboard",
   },
   {
     title: "Transfer",
-    link: "#",
+    link: "/transfer",
   },
   {
     title: "Topup",
-    link: "#",
+    link: "/topup",
   },
   {
     title: "Sign Out",
-    link: "#",
+    link: "/",
   },
 ];
 
