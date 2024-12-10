@@ -1,6 +1,7 @@
 function Transfer() {
   return (
     <div>
+      <div>This is Transfer Page</div>
       <form>
         <input name="to" type="text" />
         <input name="amount" type="number" />

@@ -4,6 +4,8 @@ import logo from "../assets/logo.png";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import ActionButton from "../components/ActionButton";
+import { useEffect } from "react";
+// import { use } from "react";
 
 function Login() {
   const [loginForm, setLoginForm] = useState({
@@ -18,9 +20,21 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
+    localStorage.setItem("loginData", JSON.stringify(loginForm));
     e.preventDefault();
     navigate("/dashboard");
   };
+  // const [loginData, setLoginData] = useState("")
+
+  useEffect(() => {
+    const data = localStorage.getItem("loginData");
+
+    const { email } = data && JSON.parse(data);
+    if (email) {
+      navigate("/dashboard");
+    }
+
+  })
 
   return (
     <section className="flex w-full h-screen bg-white">

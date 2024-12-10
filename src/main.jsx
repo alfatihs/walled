@@ -17,6 +17,7 @@ createRoot(document.getElementById("root")).render(
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<App />} />
           <Route path="/transfer" element={<Transfer />} />
+          <Route path="/login" element={<Login />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

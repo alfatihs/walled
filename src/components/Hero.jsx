@@ -1,16 +1,27 @@
 import { useState } from "react";
 import Avatar from "./Avatar";
 import viewIcon from "../assets/view.png";
+import { useEffect } from "react";
+
 
 function Hero() {
+  const [email, setEmail] = useState("");
   const [showBalance, setShowBalance] = useState(true);
+
+
+  useEffect(() => {
+    const data = localStorage.getItem("loginData");
+    if (data && JSON.parse(data).email) {
+      setEmail(JSON.parse(data).email);
+    }
+  }, [])
 
   return (
     <section className="w-full px-16 mt-12">
       <div className="flex items-center justify-center">
         <div className="mr-auto">
           <h1 className="text-black text-6xl font-bold">
-            Good Morning, Chelsea!
+            {`Good Morning, ${email}!`}
           </h1>
           <p className="text-black text-2xl mt-3">
             Check all your incoming and outgoing transactions here

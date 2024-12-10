@@ -1,24 +1,28 @@
-import { useState } from "react";
+//reject proptype error
+import PropTypes from "prop-types";
+NavItems.propTypes = {
+  menu: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+import { NavLink } from "react-router";
 
 function NavItems({ menu }) {
-  const [activeTab, setActiveTab] = useState("Dashboard");
-
   return (
     <ul className="flex gap-x-8 text-black">
       {menu.map((item) => {
         return (
-          <a
+          <NavLink
             key={item.title}
-            href={item.link}
-            className={`${
-              activeTab === item.title
-                ? "text-[#19918F] font-bold"
-                : "text-black"
-            }`}
-            onClick={() => setActiveTab(item.title)}
+            to={item.link}
+            className={({ isActive }) => isActive ? "text-[#19918F] font-bold" : "text-black"}
           >
             {item.title}
-          </a>
+          </NavLink>
         );
       })}
     </ul>
