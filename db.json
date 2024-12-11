@@ -31,43 +31,43 @@
       "type" : "DEBIT",
       "noAccount" : "1001010",
     "description" : "Transfer to Vito",
-    "amount" : "+ 75.000.000"
+    "amount" : "75.000.000"
       }, 
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "CREDIT",
       "noAccount" : "1001010",
     "description" : "Transfer from Chelsea",
-    "amount" : "- 75.000.000"
+    "amount" : "75.000.000"
       },
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "DEBIT",
       "noAccount" : "2020202",
     "description" : "Transfer to Chelsea",
-    "amount" : "+ 75.000.000"
+    "amount" : "75.000.000"
       },
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "CREDIT",
       "noAccount" : "2020202",
     "description" : "Transfer from Vito",
-    "amount" : "- 75.000.000"
+    "amount" : "75.000.000"
       },
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "DEBIT",
       "noAccount" : "1001010",
     "description" : "Transfer to Vito",
-    "amount" : "+ 75.000.000"
+    "amount" : "75.000.000"
       }, 
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "CREDIT",
       "noAccount" : "1001010",
     "description" : "Transfer from Chelsea",
-    "amount" : "- 75.000.000"
+    "amount" : "75.000.000"
       },
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "DEBIT",
       "noAccount" : "2020202",
     "description" : "Transfer to Chelsea",
-    "amount" : "+ 75.000.000"
+    "amount" : "75.000.000"
     }   
       ]
     }

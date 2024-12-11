@@ -9,9 +9,12 @@ NavItems.propTypes = {
   ).isRequired,
 };
 
+// import { IoSunnyOutline } from "react-icons/io5";
+// import ThemeContext from "../context/ThemeContext";
 import { NavLink } from "react-router";
 
 function NavItems({ menu }) {
+  // const { theme, setTheme } = ThemeContext();
   return (
     <ul className="flex gap-x-8 text-black">
       {menu.map((item) => {

@@ -8,19 +8,23 @@ import DashboardLayout from "./layouts/DashboardLayout.jsx";
 import Login from "./pages/Login.jsx";
 import Transfer from "./pages/Transfer.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ThemeContextProvider from "./provider/ThemeContextProvider.jsx";
+// import { ThemeContextProvider } from "./context/ThemeContext.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Login />} />
-        <Route element={<DashboardLayout />}>
-          <Route path="/dashboard" element={<App />} />
-          <Route path="/transfer" element={<Transfer />} />
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ThemeContextProvider>
+        <Routes>
+          <Route index element={<Login />} />
+          <Route element={<DashboardLayout />}>
+            <Route path="/dashboard" element={<App />} />
+            <Route path="/transfer" element={<Transfer />} />
+            <Route path="/login" element={<Login />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ThemeContextProvider>
     </BrowserRouter>
   </StrictMode>
 );

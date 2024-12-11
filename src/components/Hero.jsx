@@ -4,6 +4,9 @@ import viewIcon from "../assets/view.png";
 import { useEffect } from "react";
 import useFetch from "../useFetch";
 import Table from "./Table";
+import ActionButton from './ActionButton'
+import plusIcon from "../assets/plus.svg";
+import sendIcon from "../assets/send.svg";
 
 
 function Hero() {
@@ -56,17 +59,30 @@ function Hero() {
         </div>
         <div className="bg-white p-12 rounded-2xl w-full text-black">
           <p>Balance</p>
-          <span className="flex items-center mt-3 gap-x-2">
-            <p className="font-bold">
-              {showBalance ? `Rp${balance},00` : "Rp ********"}
-            </p>
-            <img
-              src={viewIcon}
-              alt="view"
-              className="w-4 h-4 object-cover cursor-pointer"
-              onClick={() => setShowBalance((prev) => !prev)}
-            />
-          </span>
+          <div className='flex justify-between'>
+
+            <div>
+              <span className="flex items-center mt-3 gap-x-2">
+                <p className="font-bold">
+                  {showBalance ? `Rp${balance},00` : "Rp ********"}
+                </p>
+                <img
+                  src={viewIcon}
+                  alt="view"
+                  className="w-4 h-4 object-cover cursor-pointer"
+                  onClick={() => setShowBalance((prev) => !prev)}
+                />
+              </span>
+            </div>
+            <div className='flex gap-x-6'>
+              <ActionButton>
+                <img src={plusIcon} alt="plus icon" className="w-8 h-8" />
+              </ActionButton>
+              <ActionButton>
+                <img src={sendIcon} alt="send icon" className="w-8 h-8" />
+              </ActionButton>
+            </div>
+          </div>
         </div>
       </div>
       <Table></Table>

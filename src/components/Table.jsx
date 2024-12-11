@@ -37,7 +37,7 @@ export default function Table() {
                             <td className="px-4 py-3 border border-gray-300">{item.type}</td>
                             <td className="px-4 py-3 border border-gray-300">{item.noAccount}</td>
                             <td className="px-4 py-3 border border-gray-300">{item.description}</td>
-                            <td className="px-4 py-3 border border-gray-300">{item.amount}</td>
+                            <td className={`px-4 py-3 border border-gray-300 ${item.type === 'DEBIT' ? "text-green-500" : item.type === 'CREDIT' ? "text-red-500" : "text-black"}`}>{item.type === 'DEBIT' ? `+ ${item.amount}` : item.type === 'CREDIT' ? `- ${item.amount}` : item.amount}</td>
                         </tr>
                     ))}
                 </tbody>
