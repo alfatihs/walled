@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 
 import "./index.css";
 import App from "./App.jsx";
-import DashboardLayout from "./layouts/DashboardLayout.jsx";
+import DashboardLayout from "./layouts/PrivateLayout.jsx";
 import Login from "./pages/Login.jsx";
 import Transfer from "./pages/Transfer.jsx";
 import NotFound from "./pages/NotFound.jsx";
