@@ -5,11 +5,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import ActionButton from "../components/ActionButton";
 import { useEffect } from "react";
-// import useFetch from "../useFetch";
 import Loading from "../components/Loading";
-// import { use } from "react";
 
 function Login() {
+  // const loginUrl = "http://localhost:3000/users";
+  const loginUrl = "http://localhost:8080/login";
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
@@ -23,25 +23,28 @@ function Login() {
     setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
   };
 
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
     setIsLoading(true);
 
+    async () => {
+      await wait(1500);
+      console.log("loading")
+    }
+
     try {
-      //tambahin loading time
-      // const minimumLoadingTime = new Promise((resolve) => {
-      //   setTimeout(resolve, 1500); // Delay for 1.5 seconds
-      // });
-
       // Fetch user data from the API
-      const response = await fetch("http://localhost:3000/users");
-      const users = await response.json();
+      const response = await fetch(loginUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginForm),
+      })
 
-      // Validate user credentials
-      const userValid = users.find(
-        (u) =>
-          u.email === loginForm.email && u.password === loginForm.password
-      );
+      const userValid = await response.json();
+      console.log(userValid);
 
       if (userValid) {
         console.log("Login successful");
@@ -59,8 +62,6 @@ function Login() {
       setIsLoading(false);
     }
   };
-
-  // const [loginData, setLoginData] = useState("")
 
   useEffect(() => {
     const data = localStorage.getItem("loginData");
