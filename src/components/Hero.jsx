@@ -2,7 +2,7 @@ import { useState } from "react";
 import Avatar from "./Avatar";
 import viewIcon from "../assets/view.png";
 import { useEffect } from "react";
-import useFetch from "../useFetch";
+// import useFetch from "../useFetch";
 import Table from "./Table";
 import ActionButton from './ActionButton'
 import plusIcon from "../assets/plus.svg";
@@ -20,24 +20,15 @@ function Hero() {
 
   useEffect(() => {
     const data = localStorage.getItem("loginData");
-    if (data && JSON.parse(data).email) {
+    if (data) {
       setEmail(JSON.parse(data).email);
       setName(JSON.parse(data).name);
-      setBalance(JSON.parse(data).saldo);
-      setAccountNumber(JSON.parse(data).noAccount);
-      setImgUrl(JSON.parse(data).imgUrl);
+      setBalance(JSON.parse(data).balance);
+      setAccountNumber(1000 + JSON.parse(data).id);
+      setImgUrl(JSON.parse(data).imgurl);
     }
   }, [])
 
-
-  const url = "http://localhost:3000/users";
-  const data = useFetch(url);
-
-  console.log(data, "d")
-
-  if (data.length === 0) {
-    return "Loading..."
-  }
 
   return (
     <section className="w-full px-16 mt-12">

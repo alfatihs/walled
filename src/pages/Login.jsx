@@ -49,6 +49,7 @@ function Login() {
       if (userValid) {
         console.log("Login successful");
         localStorage.setItem("loginData", JSON.stringify(userValid));
+        localStorage.setItem("isLogin", true);
         navigate("/dashboard");
       } else {
         alert("Invalid email or password");

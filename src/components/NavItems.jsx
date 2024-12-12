@@ -26,6 +26,7 @@ function NavItems({ menu }) {
             onClick={() => {
               if (item.title === "Sign Out") {
                 localStorage.removeItem("loginData");
+                localStorage.removeItem("isLogin");
               }
             }}          >
             {item.title}

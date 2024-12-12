@@ -1,15 +1,17 @@
+import { useEffect } from "react";
 import useFetch from "../useFetch";
 // import { useState, useEffect } from "react";
 
 export default function Table() {
 
-    const [tableData] = useFetch("http://localhost:3000/table");
+    // const [tableData] = useFetch("http://localhost:3000/table");
 
+    const [tableData] = useFetch("http://localhost:8080/transactions");
+    // console.log(tableData, "tableData");
     // Handle loading state
     if (!tableData) {
         return <p>Loading data...</p>;
     }
-
     // Handle empty data
     if (tableData.length === 0) {
         return <p>No data available.</p>;
@@ -33,9 +35,9 @@ export default function Table() {
                             key={item.id}
                             className={index % 2 === 0 ? "bg-gray-100" : "bg-white"}
                         >
-                            <td className="px-4 py-3 border border-gray-300">{item.dateTime}</td>
+                            <td className="px-4 py-3 border border-gray-300">{item.datetime}</td>
                             <td className="px-4 py-3 border border-gray-300">{item.type}</td>
-                            <td className="px-4 py-3 border border-gray-300">{item.noAccount}</td>
+                            <td className="px-4 py-3 border border-gray-300">{item.fromto}</td>
                             <td className="px-4 py-3 border border-gray-300">{item.description}</td>
                             <td className={`px-4 py-3 border border-gray-300 ${item.type === 'DEBIT' ? "text-green-500" : item.type === 'CREDIT' ? "text-red-500" : "text-black"}`}>{item.type === 'DEBIT' ? `+ ${item.amount}` : item.type === 'CREDIT' ? `- ${item.amount}` : item.amount}</td>
                         </tr>

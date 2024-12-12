@@ -31,7 +31,7 @@
       "type" : "DEBIT",
       "noAccount" : "1001010",
     "description" : "Transfer to Vito",
-    "amount" : "75.000.000"
+    "amount" : "75000000"
       }, 
       { "dateTime" : "20:10 - 30 June 2022",
       "type" : "CREDIT",
@@ -71,3 +71,11 @@
     }   
       ]
     }
+
+
+    { "datetime" : "20:10 - 30 June 2022",
+    "type" : "DEBIT",
+    "noAccount" : "2020202",
+  "description" : "Transfer to Chelsea",
+  "amount" : "75.000.000"
+  }   

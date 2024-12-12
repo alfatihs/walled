@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 
 
-function DashboardLayout() {
+function PrivateLayout() {
   return (
     <>
       <Navbar />
@@ -12,4 +12,4 @@ function DashboardLayout() {
   );
 }
 
-export default DashboardLayout;
+export default PrivateLayout;
